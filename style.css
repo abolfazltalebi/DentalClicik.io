@@ -1,0 +1,498 @@
+@font-face {
+    font-family: "vazir";
+    src: url(font/Vazir.eot) format("eot"), url(font/Vazir.ttf) format("truetype"),
+        url(font/Vazir.woff) format("woff"), url(font/Vazir.woff2) format("woff2");
+}
+
+* {
+    font-family: "vazir";
+}
+
+body {
+    background-color: var(--color-body);
+}
+
+:root {
+    --color-text: #001524;
+    --color-header: #eae9ecec;
+    --text-header: #001;
+    --color-body: #fcfcfc;
+    --color-box: #6610f2;
+    --color-btn: #6930c3;
+}
+
+.color-header {
+    color: var(--text-header);
+}
+
+.color-text {
+    color: var(--color-text);
+}
+
+.color-box {
+    background-color: var(--color-box);
+}
+
+.color-box-text {
+    color: var(--color-box);
+}
+
+.color-btn {
+    background-color: var(--color-btn);
+}
+
+.bg-header {
+    background-color: var(--color-header);
+}
+
+.radius-10 {
+    border-radius: 10px;
+}
+
+.radius-30 {
+    border-radius: 30px;
+}
+
+.radius-50 {
+    border-radius: 50px;
+}
+
+.radius-70 {
+    border-radius: 70px;
+}
+
+.radius-100 {
+    border-radius: 100px;
+}
+
+a,
+a:visited {
+    text-decoration: none;
+    color: inherit;
+}
+
+.search {
+    padding: 10px;
+    color: #eee;
+    background: linear-gradient(to bottom right, #6610f2, #eee);
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+}
+
+.search :is(input, button) {
+    color: black;
+    border: none;
+    background: transparent;
+    outline: none;
+}
+
+.search__input {
+    width: 0;
+    transition: width 0.5s;
+}
+
+.search__btn {
+    width: 25px;
+    height: 25px;
+    display: grid;
+    place-items: center;
+    cursor: pointer;
+}
+
+.search:focus-within input {
+    width: 200px;
+}
+
+::placeholder {
+    color: inherit;
+}
+
+.hover-li:hover {
+    /* border-right: 3px solid blue;
+    border-left: 3px solid blue; */
+    transition: all 0.5s;
+    border-radius: 15px;
+}
+
+.hover-li {
+    display: inline-block;
+    position: relative;
+    margin-block: 2px;
+}
+
+.hover-li::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: var(--color-box);
+    left: 0;
+    top: 2px;
+    transition: transform 0.25s;
+    color: blue;
+    font-size: 30px;
+    transform: scaleX(0);
+    border-radius: 3px;
+}
+
+.hover-li::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: var(--color-box);
+    right: 0;
+    bottom: 2px;
+    transition: transform 0.25s;
+    color: blue;
+    font-size: 30px;
+    transform: scaleX(0);
+    border-radius: 3px;
+}
+
+.hover-li:hover::after,
+.hover-li:hover::before {
+    transform: scaleX(0.95);
+}
+
+.label-text {
+    position: absolute;
+    top: 26%;
+    left: 29px;
+    font-size: 50px;
+}
+
+.margin-button {
+    margin-right: 45%;
+}
+
+.margin-btn {
+    position: relative;
+    right: 16%;
+    top: 14%;
+}
+
+.btn-hover:hover {
+    background: none;
+    border: 1px solid #ffffff;
+    border-radius: 50px;
+    color: var(--color-text) !important;
+    transform: scale(1.1);
+    transition: all ease 0.3s;
+    box-shadow: 0px 0px 8px 3px var(--color-box);
+}
+
+.margin-boximg {
+    position: relative;
+    top: 80px;
+}
+
+.img-box {
+    margin-right: 230px;
+    background: #fff;
+}
+
+.box-hover:hover {
+    box-shadow: 0px 0px 8px 3px var(--color-box);
+    transition: all 0.4s;
+    transform: scale(0.95);
+}
+
+.margin-righ-img {
+    margin-right: 43%;
+}
+
+.bg-box {
+    background-color: var(--color-header);
+}
+
+.cssbuttons-io-button {
+    background: var(--color-btn);
+    color: white;
+    font-family: inherit;
+    padding: 0.35em;
+    padding-left: 1.2em;
+    font-size: 17px;
+    font-weight: 500;
+    border-radius: 0.9em;
+    border: none;
+    letter-spacing: 0.05em;
+    display: flex;
+    align-items: center;
+    box-shadow: inset 0 0 1.6em -0.6em #714da6;
+    overflow: hidden;
+    position: relative;
+    height: 2.8em;
+    padding-right: 3.3em;
+    right: 65px;
+}
+
+.cssbuttons-io-button .icon {
+    background: white;
+    margin-left: 1em;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 2.2em;
+    width: 2.2em;
+    border-radius: 0.7em;
+    box-shadow: 0.1em 0.1em 0.6em 0.2em #7b52b9;
+    right: 0.3em;
+    transition: all 0.3s;
+}
+
+.cssbuttons-io-button:hover .icon {
+    width: calc(100% - 0.6em);
+}
+
+.cssbuttons-io-button .icon svg {
+    width: 1.1em;
+    transition: transform 0.3s;
+    color: #7b52b9;
+}
+
+.cssbuttons-io-button:hover .icon svg {
+    transform: translateX(0.1em);
+}
+
+.cssbuttons-io-button:active .icon {
+    transform: scale(0.95);
+}
+
+.card-1 {
+    width: 190px;
+    height: 254px;
+    background: #f0f0f0;
+    border-radius: 10px;
+    text-align: center;
+    transition: all 0.5s;
+}
+
+.card-1:hover {
+    box-shadow: inset 0 0 14px 5px rgb(243 243 243 / 68%);
+    background-color: #673ab7;
+}
+
+.card-1 .blob {
+    height: 10px;
+    width: 75%;
+    border-radius: 0 0 30px 30px;
+    margin: 0 auto;
+    background-color: #673ab7;
+    visibility: visible;
+    transition: all 0.3s;
+}
+
+.card-1:hover .blob {
+    height: 0;
+}
+
+.card-1 .img {
+    display: flex;
+    margin: 30px auto 10px auto;
+    width: 70px;
+    height: 70px;
+    background-color: #673ab7;
+    border-radius: 50%;
+    font-size: 11px;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.5s;
+}
+
+.card-1 .img::before {
+    content: " Dr.amir";
+    position: absolute;
+    left: 84px;
+    font-size: large;
+    color: white;
+}
+
+.card-1:hover .img {
+    width: 100%;
+    height: 70%;
+    border-radius: 10px 0 0;
+    margin: 0 auto;
+    background-image: url(img/dramir.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    z-index: 99999;
+}
+
+.card-1 .img-1 {
+    display: flex;
+    margin: 30px auto 10px auto;
+    width: 70px;
+    height: 70px;
+    background-color: #673ab7;
+    border-radius: 50%;
+    font-size: 11px;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.5s;
+}
+
+.card-1 .img-1::before {
+    content: " Dr.amin";
+    position: absolute;
+    left: 84px;
+    font-size: large;
+    color: white;
+}
+
+.card-1:hover .img-1 {
+    width: 100%;
+    height: 70%;
+    border-radius: 10px 0 0;
+    margin: 0 auto;
+    background-image: url(img/dramin.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    z-index: 99999;
+}
+
+.card-1 .img-2 {
+    display: flex;
+    margin: 30px auto 10px auto;
+    width: 70px;
+    height: 70px;
+    background-color: #673ab7;
+    border-radius: 50%;
+    font-size: 11px;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.5s;
+}
+
+.card-1 .img-2::before {
+    content: " Dr.marya";
+    position: absolute;
+    left: 84px;
+    color: white;
+    font-size: larger;
+}
+
+.card-1:hover .img-2 {
+    width: 100%;
+    height: 70%;
+    border-radius: 10px 0 0;
+    margin: 0 auto;
+    background-image: url(img/drmaryam.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    z-index: 99999;
+}
+
+.card-1 h2 {
+    padding: 15px 10px;
+    font-size: 25px;
+    transition: all 0.1s;
+    z-index: -99;
+    line-height: 17px;
+}
+
+.card-1 span {
+    font-size: 18px;
+}
+
+.card-1:hover h2 {
+    opacity: 0;
+    width: 100%;
+    position: absolute;
+    transition: all 0.5s;
+}
+
+.card-1>p {
+    opacity: 0;
+    transition: all 0.75s;
+}
+
+.card-1>p>svg {
+    padding: 5px;
+}
+
+.card-1:hover>p {
+    position: absolute;
+    bottom: 15px;
+    left: 60px;
+    opacity: 1;
+    transition: all 0.1s;
+}
+
+.icon {
+    position: relative;
+    display: inline-flex;
+}
+
+.icon i {
+    font-size: 36px;
+    background: linear-gradient(circle at 30% 107%,
+            #fdf497 1%,
+            #fdf497 6%,
+            #fd5949 45%,
+            #d5249f 60%,
+            #2b54ed 90%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.icon::before,
+.icon::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 3px);
+    visibility: hidden;
+    transition: transform 0.5s;
+}
+
+.icon::before {
+    top: 36px;
+    border: 5px solid transparent;
+    border-top: 5px solid #fff;
+}
+
+.icon::after {
+    content: attr(data-tooltip);
+    top: 44px;
+    padding: 2px 5px;
+    border-radius: 4px;
+    color: #000;
+    font-size: 14px;
+    background-color: #fff;
+}
+
+.icon:hover::before,
+.icon:hover::after {
+    transform: translate(-50%, 0);
+    visibility: visible;
+}
+
+.li-1::before {
+    content: "Ã¢Å“â€";
+    position: absolute;
+    right: 39px;
+    color: aliceblue;
+}
+
+.box {
+    width: 100%;
+    height: auto;
+    background-image: linear-gradient(180deg, #cacaca 0%, #3700ff 100%);
+    border-radius: 10px;
+    padding: 5px;
+}
+
+.box img:hover {
+    transform: scale(0.95);
+    border-radius: 20px;
+    transition: all 0.3s;
+}
+
+.bg-footer {
+    background-image: url(img/bg-footer.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
